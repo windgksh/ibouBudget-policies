@@ -2,7 +2,7 @@
 
 **시행일: 2026-05-29**
 
-ibou(이하 "회사")는 ibouBudget 앱(이하 "앱") 이용자의 개인정보를 중요하게 생각하며, 「개인정보 보호법」(PIPA), GDPR, Apple App Store 정책을 준수합니다. 본 방침은 한국어를 정본으로 합니다.
+Ibou AI(이하 "회사")는 ibouBudget 앱(이하 "앱") 이용자의 개인정보를 중요하게 생각하며, 「개인정보 보호법」(PIPA), GDPR, Apple App Store 정책을 준수합니다. 본 방침은 한국어를 정본으로 합니다.
 
 ---
 
@@ -95,7 +95,7 @@ AI 기능 사용 시 처리에 필요한 데이터가 다음 수탁자에게 위
 
 ## 10. 개인정보 보호책임자
 
-- **개인정보 보호책임자**: ibou 운영팀
+- **개인정보 보호책임자**: Ibou AI 운영팀
 - **연락처**: support@ibou.ai
 
 ## 11. 문의
@@ -141,7 +141,7 @@ ibouBudget is local-first: your budgeting data (transactions, categories, budget
 **User rights.** You may request access, correction, deletion, suspension of processing, and withdrawal of consent. For automated outputs (category suggestions, recaps, chat responses), you may request an explanation or object — these outputs are informational and do not produce legal or significant effects.
 
 **Data Protection Officer**
-- Officer: ibou Operations Team
+- Officer: Ibou AI Operations Team
 - Contact: **support@ibou.ai**
 
 Questions: **support@ibou.ai**
