@@ -53,25 +53,56 @@ ibouBudget은 **사용자의 가계부 데이터(거래 내역, 카테고리, �
 
 ## 5. 14세 미만 이용자
 
-「개인정보 보호법」 §22-2에 따라 14세 미만 이용자의 개인정보 처리에는 법정대리인 동의가 필요합니다. 본 앱은 프로필 입력 단계에서 14세 미만으로 판별되면 입력을 차단합니다.
+「개인정보 보호법」 관련 규정에 따라 14세 미만 이용자의 개인정보 처리에는 법정대리인 동의가 필요합니다. 본 앱은 프로필 입력 단계에서 14세 미만으로 판별되면 입력을 차단합니다. 차단되더라도 앱의 가계부 기능은 그대로 이용할 수 있습니다.
 
-## 6. 보관 및 파기
+## 6. 처리 위탁
+
+AI 기능 사용 시 처리에 필요한 데이터가 다음 수탁자에게 위탁 처리됩니다.
+
+| 수탁자 | 위탁업무 | 위탁시점 |
+|---|---|---|
+| Google LLC (Gemini, Firebase AI Logic) | AI 영수증 정밀 스캔, 자연어/상담 클라우드 폴백, 월간 회고·카테고리 추천 결과 생성 | 해당 AI 기능 사용 시 |
+| Google LLC (Firebase App Check) | 앱 무결성 검증 토큰 발급 | 앱 실행 시 |
+
+수탁자는 위탁받은 업무 목적 외 이용이 금지됩니다.
+
+## 7. 개인정보의 국외 이전
+
+위 수탁 처리 중 일부는 국외로 이전됩니다.
+
+- **이전받는 자**: Google LLC
+- **이전되는 국가**: 미국
+- **이전 일시 및 방법**: AI 기능 사용 시점, HTTPS 암호화 전송
+- **이전 항목**: 영수증 이미지 또는 거래 요약 텍스트·입력 문장 (신원 비연결), 앱 무결성 토큰
+- **이전 목적**: 본 방침 3·4·6항에 기재된 AI 결과 생성 및 무결성 검증
+- **보유·이용 기간**: Google의 개인정보처리방침에 따름 (https://policies.google.com/privacy)
+
+이용자는 AI 기능을 사용하지 않음으로써 위 국외 이전을 거부할 수 있습니다.
+
+## 8. 보관 및 파기
 
 기기 내 데이터는 사용자가 앱을 삭제하면 함께 삭제됩니다. 회사는 별도 사본을 보유하지 않습니다. AI 기능을 통해 Google로 전송된 데이터의 보관은 Google의 정책을 따릅니다.
 
-## 7. 이용자 권리
+## 9. 이용자 권리
 
-이용자는 언제든 다음을 할 수 있습니다:
-- 앱 내에서 데이터 열람·수정·삭제
-- iCloud 동기화 비활성화
-- AI 기능 미사용(클라우드 전송 회피)
-- 앱 삭제로 모든 데이터 폐기
+이용자는 언제든 다음 권리를 행사할 수 있습니다.
 
-## 8. 문의
+- 개인정보 **열람·정정·삭제** 요구 (앱 내에서 직접 가능)
+- 개인정보 **처리정지** 및 **동의 철회** 요구 (iCloud 동기화 끄기, AI 기능 미사용, 앱 삭제로 즉시 효력)
+- **자동화된 결정에 대한 권리**: AI 기능이 산출한 결과(추천 카테고리, 회고, 상담 응답 등)에 대해 **설명을 요구**하거나 **이의를 제기**할 수 있습니다. 본 앱의 AI 결과는 정보 제공·참고용이며 사용자 권리·의무에 직접적 효력을 미치지 않습니다.
+
+권리 행사는 support@ibou.ai 로 요청하시거나 앱 내 기능을 통해 직접 처리하실 수 있습니다.
+
+## 10. 개인정보 보호책임자
+
+- **개인정보 보호책임자**: ibou 운영팀
+- **연락처**: support@ibou.ai
+
+## 11. 문의
 
 개인정보 관련 문의: **support@ibou.ai**
 
-## 9. 개정
+## 12. 개정
 
 본 방침은 법령 또는 서비스 변경에 따라 개정될 수 있습니다. 중요한 변경 시 앱 내 공지로 사전 안내합니다.
 
@@ -87,7 +118,7 @@ ibouBudget is local-first: your budgeting data (transactions, categories, budget
 - Optional iCloud sync uses Apple's encrypted iCloud Drive; the company has no access.
 - Location is used only at point-of-call to fetch weather mood from open-meteo.com (latitude/longitude only, no identifier); geofencing is processed on-device.
 - No advertising IDs or device fingerprints are collected.
-- Children under 14 are blocked from profile entry per Korean PIPA §22-2.
+- Children under 14 are blocked from profile entry per Korean PIPA (guardian-consent requirement). The rest of the app remains usable without a profile.
 
 **AI features and data transmission (important).** AI features run either **on-device** (Apple FoundationModels / Apple Intelligence on supported hardware, iOS 26+) or in the **cloud via Google Gemini (through Firebase AI Logic)**. When the cloud path is used — e.g., AI receipt OCR, or natural-language/chat/recap on unsupported devices — the data needed to produce the result is sent to Google:
 
@@ -104,5 +135,13 @@ ibouBudget is local-first: your budgeting data (transactions, categories, budget
 | open-meteo.com | Weather mood | Latitude/longitude (no identifier) |
 | Yahoo Finance / CoinGecko | Asset prices (if asset tracking used) | Ticker symbols (no identifier) |
 | Firebase App Check | App integrity | Anonymous device token |
+
+**Processing entrustment & cross-border transfer.** When AI features are used, the data required is entrusted to Google LLC (Gemini via Firebase AI Logic) and transferred to the United States over HTTPS. Items transferred: receipt image, or transaction summary text / typed input (not linked to identity); app integrity token. Retention follows Google's Privacy Policy. You can decline the transfer by not using AI features.
+
+**User rights.** You may request access, correction, deletion, suspension of processing, and withdrawal of consent. For automated outputs (category suggestions, recaps, chat responses), you may request an explanation or object — these outputs are informational and do not produce legal or significant effects.
+
+**Data Protection Officer**
+- Officer: ibou Operations Team
+- Contact: **support@ibou.ai**
 
 Questions: **support@ibou.ai**
